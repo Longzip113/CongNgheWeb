@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6866FDF4-0C66-40B8-93F8-94A38CF0DF3C}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Project</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CuaHangController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PartialController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Global.asax" />
+    <Content Include="Template\css\availability-calendar.css" />
+    <Content Include="Template\css\bootstrap.css" />
+    <Content Include="Template\css\font-awesome.min.css" />
+    <Content Include="Template\css\ion.rangeSlider.css" />
+    <Content Include="Template\css\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Template\css\jquerysctipttop.css" />
+    <Content Include="Template\css\linearicons.css" />
+    <Content Include="Template\css\magnific-popup.css" />
+    <Content Include="Template\css\main.css" />
+    <Content Include="Template\css\nice-select.css" />
+    <Content Include="Template\css\nouislider.min.css" />
+    <Content Include="Template\css\owl.carousel.css" />
+    <Content Include="Template\css\themify-icons.css" />
+    <Content Include="Template\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template\fonts\Linearicons-Free.svg" />
+    <Content Include="Template\fonts\themify.svg" />
+    <Content Include="Template\img\banner\banner-bg.jpg" />
+    <Content Include="Template\img\banner\banner-img.png" />
+    <Content Include="Template\img\banner\common-banner.jpg" />
+    <Content Include="Template\img\banner\next.png" />
+    <Content Include="Template\img\banner\prev.png" />
+    <Content Include="Template\img\blog\add.jpg" />
+    <Content Include="Template\img\blog\author.png" />
+    <Content Include="Template\img\blog\c1.jpg" />
+    <Content Include="Template\img\blog\c2.jpg" />
+    <Content Include="Template\img\blog\c3.jpg" />
+    <Content Include="Template\img\blog\c4.jpg" />
+    <Content Include="Template\img\blog\c5.jpg" />
+    <Content Include="Template\img\blog\c6.jpg" />
+    <Content Include="Template\img\blog\cat-post\cat-post-1.jpg" />
+    <Content Include="Template\img\blog\cat-post\cat-post-2.jpg" />
+    <Content Include="Template\img\blog\cat-post\cat-post-3.jpg" />
+    <Content Include="Template\img\blog\causes\causes-1.jpg" />
+    <Content Include="Template\img\blog\causes\causes-2.jpg" />
+    <Content Include="Template\img\blog\causes\causes-3.jpg" />
+    <Content Include="Template\img\blog\feature-img1.jpg" />
+    <Content Include="Template\img\blog\latest-post\l-post-1.jpg" />
+    <Content Include="Template\img\blog\latest-post\l-post-2.jpg" />
+    <Content Include="Template\img\blog\latest-post\l-post-3.jpg" />
+    <Content Include="Template\img\blog\latest-post\l-post-4.jpg" />
+    <Content Include="Template\img\blog\main-blog\m-blog-1.jpg" />
+    <Content Include="Template\img\blog\main-blog\m-blog-2.jpg" />
+    <Content Include="Template\img\blog\main-blog\m-blog-3.jpg" />
+    <Content Include="Template\img\blog\main-blog\m-blog-4.jpg" />
+    <Content Include="Template\img\blog\main-blog\m-blog-5.jpg" />
+    <Content Include="Template\img\blog\next.jpg" />
+    <Content Include="Template\img\blog\popular-post\post1.jpg" />
+    <Content Include="Template\img\blog\popular-post\post2.jpg" />
+    <Content Include="Template\img\blog\popular-post\post3.jpg" />
+    <Content Include="Template\img\blog\popular-post\post4.jpg" />
+    <Content Include="Template\img\blog\post-img1.jpg" />
+    <Content Include="Template\img\blog\post-img2.jpg" />
+    <Content Include="Template\img\blog\prev.jpg" />
+    <Content Include="Template\img\brand\1.png" />
+    <Content Include="Template\img\brand\2.png" />
+    <Content Include="Template\img\brand\3.png" />
+    <Content Include="Template\img\brand\4.png" />
+    <Content Include="Template\img\brand\5.png" />
+    <Content Include="Template\img\cart.jpg" />
+    <Content Include="Template\img\category\c1.jpg" />
+    <Content Include="Template\img\category\c2.jpg" />
+    <Content Include="Template\img\category\c3.jpg" />
+    <Content Include="Template\img\category\c4.jpg" />
+    <Content Include="Template\img\category\c5.jpg" />
+    <Content Include="Template\img\category\s-p1.jpg" />
+    <Content Include="Template\img\elements\d.jpg" />
+    <Content Include="Template\img\elements\disabled-check.png" />
+    <Content Include="Template\img\elements\disabled-radio.png" />
+    <Content Include="Template\img\elements\f1.jpg" />
+    <Content Include="Template\img\elements\f2.jpg" />
+    <Content Include="Template\img\elements\f3.jpg" />
+    <Content Include="Template\img\elements\f4.jpg" />
+    <Content Include="Template\img\elements\f5.jpg" />
+    <Content Include="Template\img\elements\f6.jpg" />
+    <Content Include="Template\img\elements\f7.jpg" />
+    <Content Include="Template\img\elements\f8.jpg" />
+    <Content Include="Template\img\elements\g1.jpg" />
+    <Content Include="Template\img\elements\g2.jpg" />
+    <Content Include="Template\img\elements\g3.jpg" />
+    <Content Include="Template\img\elements\g4.jpg" />
+    <Content Include="Template\img\elements\g5.jpg" />
+    <Content Include="Template\img\elements\g6.jpg" />
+    <Content Include="Template\img\elements\g7.jpg" />
+    <Content Include="Template\img\elements\g8.jpg" />
+    <Content Include="Template\img\elements\primary-check.png" />
+    <Content Include="Template\img\elements\primary-radio.png" />
+    <Content Include="Template\img\elements\success-check.png" />
+    <Content Include="Template\img\elements\success-radio.png" />
+    <Content Include="Template\img\exclusive.jpg" />
+    <Content Include="Template\img\fav.png" />
+    <Content Include="Template\img\features\f-icon1.png" />
+    <Content Include="Template\img\features\f-icon2.png" />
+    <Content Include="Template\img\features\f-icon3.png" />
+    <Content Include="Template\img\features\f-icon4.png" />
+    <Content Include="Template\img\i1.jpg" />
+    <Content Include="Template\img\i2.jpg" />
+    <Content Include="Template\img\i3.jpg" />
+    <Content Include="Template\img\i4.jpg" />
+    <Content Include="Template\img\i5.jpg" />
+    <Content Include="Template\img\i6.jpg" />
+    <Content Include="Template\img\i7.jpg" />
+    <Content Include="Template\img\i8.jpg" />
+    <Content Include="Template\img\l1.jpg" />
+    <Content Include="Template\img\l2.jpg" />
+    <Content Include="Template\img\l3.jpg" />
+    <Content Include="Template\img\l4.jpg" />
+    <Content Include="Template\img\l5.jpg" />
+    <Content Include="Template\img\l6.jpg" />
+    <Content Include="Template\img\l7.jpg" />
+    <Content Include="Template\img\l8.jpg" />
+    <Content Include="Template\img\login.jpg" />
+    <Content Include="Template\img\logo.png" />
+    <Content Include="Template\img\men-bg.jpg" />
+    <Content Include="Template\img\ob1.jpg" />
+    <Content Include="Template\img\ob2.jpg" />
+    <Content Include="Template\img\ob3.jpg" />
+    <Content Include="Template\img\organic-food\b1.png" />
+    <Content Include="Template\img\organic-food\b2.png" />
+    <Content Include="Template\img\organic-food\b3.png" />
+    <Content Include="Template\img\organic-food\b4.png" />
+    <Content Include="Template\img\organic-food\c1.jpg" />
+    <Content Include="Template\img\organic-food\c2.jpg" />
+    <Content Include="Template\img\organic-food\c3.jpg" />
+    <Content Include="Template\img\organic-food\c4.jpg" />
+    <Content Include="Template\img\organic-food\cd-bg.jpg" />
+    <Content Include="Template\img\organic-food\cd.png" />
+    <Content Include="Template\img\organic-food\ci1.jpg" />
+    <Content Include="Template\img\organic-food\ci2.jpg" />
+    <Content Include="Template\img\organic-food\ci3.jpg" />
+    <Content Include="Template\img\organic-food\f1.jpg" />
+    <Content Include="Template\img\organic-food\f2.jpg" />
+    <Content Include="Template\img\organic-food\f3.jpg" />
+    <Content Include="Template\img\organic-food\f4.jpg" />
+    <Content Include="Template\img\organic-food\m1.png" />
+    <Content Include="Template\img\organic-food\mp1.jpg" />
+    <Content Include="Template\img\organic-food\mp10.jpg" />
+    <Content Include="Template\img\organic-food\mp11.jpg" />
+    <Content Include="Template\img\organic-food\mp12.jpg" />
+    <Content Include="Template\img\organic-food\mp2.jpg" />
+    <Content Include="Template\img\organic-food\mp3.jpg" />
+    <Content Include="Template\img\organic-food\mp4.jpg" />
+    <Content Include="Template\img\organic-food\mp5.jpg" />
+    <Content Include="Template\img\organic-food\mp6.jpg" />
+    <Content Include="Template\img\organic-food\mp7.jpg" />
+    <Content Include="Template\img\organic-food\mp8.jpg" />
+    <Content Include="Template\img\organic-food\mp9.jpg" />
+    <Content Include="Template\img\organic-food\ob1.jpg" />
+    <Content Include="Template\img\organic-food\ob2.jpg" />
+    <Content Include="Template\img\organic-food\ob3.jpg" />
+    <Content Include="Template\img\organic-food\p1.jpg" />
+    <Content Include="Template\img\organic-food\p2.jpg" />
+    <Content Include="Template\img\organic-food\p3.jpg" />
+    <Content Include="Template\img\organic-food\p4.jpg" />
+    <Content Include="Template\img\organic-food\p5.jpg" />
+    <Content Include="Template\img\organic-food\p6.jpg" />
+    <Content Include="Template\img\organic-food\p7.jpg" />
+    <Content Include="Template\img\organic-food\p8.jpg" />
+    <Content Include="Template\img\organic-food\pl1.jpg" />
+    <Content Include="Template\img\organic-food\pl2.jpg" />
+    <Content Include="Template\img\organic-food\pl3.jpg" />
+    <Content Include="Template\img\organic-food\pl4.jpg" />
+    <Content Include="Template\img\organic-food\pl5.jpg" />
+    <Content Include="Template\img\organic-food\pl6.jpg" />
+    <Content Include="Template\img\organic-food\pl7.jpg" />
+    <Content Include="Template\img\organic-food\pl8.jpg" />
+    <Content Include="Template\img\organic-food\pm.jpg" />
+    <Content Include="Template\img\organic-food\q1.jpg" />
+    <Content Include="Template\img\organic-food\u1.png" />
+    <Content Include="Template\img\organic-food\u2.png" />
+    <Content Include="Template\img\organic-food\u3.png" />
+    <Content Include="Template\img\product\card.jpg" />
+    <Content Include="Template\img\product\e-p1.png" />
+    <Content Include="Template\img\product\next.png" />
+    <Content Include="Template\img\product\p1.jpg" />
+    <Content Include="Template\img\product\p2.jpg" />
+    <Content Include="Template\img\product\p3.jpg" />
+    <Content Include="Template\img\product\p4.jpg" />
+    <Content Include="Template\img\product\p5.jpg" />
+    <Content Include="Template\img\product\p6.jpg" />
+    <Content Include="Template\img\product\p7.jpg" />
+    <Content Include="Template\img\product\p8.jpg" />
+    <Content Include="Template\img\product\prev.png" />
+    <Content Include="Template\img\product\review-1.png" />
+    <Content Include="Template\img\product\review-2.png" />
+    <Content Include="Template\img\product\review-3.png" />
+    <Content Include="Template\img\q1.jpg" />
+    <Content Include="Template\img\r1.jpg" />
+    <Content Include="Template\img\r10.jpg" />
+    <Content Include="Template\img\r11.jpg" />
+    <Content Include="Template\img\r12.jpg" />
+    <Content Include="Template\img\r2.jpg" />
+    <Content Include="Template\img\r3.jpg" />
+    <Content Include="Template\img\r4.jpg" />
+    <Content Include="Template\img\r5.jpg" />
+    <Content Include="Template\img\r6.jpg" />
+    <Content Include="Template\img\r7.jpg" />
+    <Content Include="Template\img\r8.jpg" />
+    <Content Include="Template\img\r9.jpg" />
+    <Content Include="Template\img\sd\c1.jpg" />
+    <Content Include="Template\img\sd\c2.jpg" />
+    <Content Include="Template\img\sd\c3.jpg" />
+    <Content Include="Template\img\sd\c4.jpg" />
+    <Content Include="Template\img\sd\c5.jpg" />
+    <Content Include="Template\js\countdown.js" />
+    <Content Include="Template\js\gmaps.min.js" />
+    <Content Include="Template\js\ion.rangeSlider.js" />
+    <Content Include="Template\js\jquery.ajaxchimp.min.js" />
+    <Content Include="Template\js\jquery.magnific-popup.min.js" />
+    <Content Include="Template\js\jquery.nice-select.min.js" />
+    <Content Include="Template\js\jquery.sticky.js" />
+    <Content Include="Template\js\main.js" />
+    <Content Include="Template\js\nouislider.min.js" />
+    <Content Include="Template\js\owl.carousel.min.js" />
+    <Content Include="Template\js\parallax.min.js" />
+    <Content Include="Template\js\vendor\bootstrap.min.js" />
+    <Content Include="Template\js\vendor\jquery-2.2.4.min.js" />
+    <Content Include="Template\js\vendor\popper.js" />
+    <Content Include="Template\Karma Shop-doc\css\font-awesome.min.css" />
+    <Content Include="Template\Karma Shop-doc\css\main.css" />
+    <Content Include="Template\Karma Shop-doc\css\normalize.min.css" />
+    <Content Include="Template\Karma Shop-doc\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template\Karma Shop-doc\img\logo.png" />
+    <Content Include="Template\Karma Shop-doc\index.html" />
+    <Content Include="Template\Karma Shop-doc\js\custom.js" />
+    <Content Include="Template\Karma Shop-doc\js\jquery-1.11.0.min.js" />
+    <Content Include="Template\Karma Shop-doc\js\jquery.nav.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shCore.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shCore.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="img\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Template\css\.DS_Store" />
+    <Content Include="Template\css\bootstrap.map" />
+    <Content Include="Template\css\main.css.map" />
+    <Content Include="Template\css\main.map" />
+    <Content Include="Template\fonts\fontawesome-webfont.eot" />
+    <Content Include="Template\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Template\fonts\fontawesome-webfont.woff" />
+    <Content Include="Template\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Template\fonts\FontAwesome.otf" />
+    <Content Include="Template\fonts\Linearicons-Free.eot" />
+    <Content Include="Template\fonts\Linearicons-Free.ttf" />
+    <Content Include="Template\fonts\Linearicons-Free.woff" />
+    <Content Include="Template\fonts\Linearicons-Free.woff2" />
+    <Content Include="Template\fonts\themify.eot" />
+    <Content Include="Template\fonts\themify.ttf" />
+    <Content Include="Template\fonts\themify.woff" />
+    <Content Include="Template\img\.DS_Store" />
+    <Content Include="Template\img\organic-food\.DS_Store" />
+    <Content Include="Template\js\.DS_Store" />
+    <Content Include="Template\Karma Shop-doc\.DS_Store" />
+    <Content Include="Template\Karma Shop-doc\css\_DS_Store" />
+    <Content Include="Template\Karma Shop-doc\fonts\fontawesome-webfont.eot" />
+    <Content Include="Template\Karma Shop-doc\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Template\Karma Shop-doc\fonts\fontawesome-webfont.woff" />
+    <Content Include="Template\Karma Shop-doc\fonts\FontAwesome.otf" />
+    <Content Include="Template\Karma Shop-doc\fonts\_DS_Store" />
+    <Content Include="Template\Karma Shop-doc\js\_DS_Store" />
+    <Content Include="Template\Karma Shop-doc\syntax-highlighter\_DS_Store" />
+    <Content Include="Template\Karma Shop-doc\_DS_Store" />
+    <Content Include="Template\scss\.DS_Store" />
+    <Content Include="Template\scss\main.scss" />
+    <Content Include="Template\scss\theme\_banner.scss" />
+    <Content Include="Template\scss\theme\_blog.scss" />
+    <Content Include="Template\scss\theme\_common.scss" />
+    <Content Include="Template\scss\theme\_contact.scss" />
+    <Content Include="Template\scss\theme\_elements.scss" />
+    <Content Include="Template\scss\theme\_footer.scss" />
+    <Content Include="Template\scss\theme\_header.scss" />
+    <Content Include="Template\scss\theme\_home.scss" />
+    <Content Include="Template\scss\theme\_mixins.scss" />
+    <Content Include="Template\scss\theme\_predefine.scss" />
+    <Content Include="Template\scss\theme\_product.scss" />
+    <Content Include="Template\scss\theme\_reset.scss" />
+    <Content Include="Template\scss\theme\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\LayoutMaster\UserLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CuaHang\DanhSachGiay.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\GioHang\GioHang.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CuaHang\ChiTietSanPham.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\GioHang\ThanhToan.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Partial\MenuPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CuaHang\TimKiem.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49893/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

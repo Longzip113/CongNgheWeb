@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "ChiTietSanPham";
+    Layout = "~/Views/LayoutMaster/UserLayout.cshtml";
+}
+
+<!--================Single Product Area =================-->
+	<div class="product_image_area">
+		<div class="container">
+			<div class="row s_product_inner">
+				<div class="col-lg-6">
+					<div class="s_Product_carousel">
+						<div class="single-prd-item">
+							<img class="img-fluid" src="/Template/img/category/s-p1.jpg" alt="">
+						</div>
+						<div class="single-prd-item">
+							<img class="img-fluid" src="/Template/img/category/s-p1.jpg" alt="">
+						</div>
+						<div class="single-prd-item">
+							<img class="img-fluid" src="/Template/img/category/s-p1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 offset-lg-1">
+					<div class="s_product_text">
+						<h3>Giày nike</h3>
+						<h2>$149.99</h2>
+						<ul class="list">
+							<li><a class="active" href="#"><span>Loại giày</span> : Thể thao</a></li>
+						</ul>
+						<p>
+							Mill Oil là bộ tản nhiệt đầy dầu cải tiến với công nghệ hiện đại nhất.
+							 Nếu bạn đang tìm kiếm thứ gì đó có thể làm cho nội thất của bạn trông tuyệt vời, 
+							 đồng thời mang lại cho bạn cảm giác ấm áp dễ chịu trong mùa đông.
+						</p>
+						<div class="product_count">
+							<label for="qty">Số lượng:</label>
+							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+							 class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+							 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+						</div>
+						<div class="card_area d-flex align-items-center">
+							<a class="primary-btn" href="#">Thêm giỏ hàng</a>
+							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================End Single Product Area =================-->
