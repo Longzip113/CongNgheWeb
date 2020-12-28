@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/LayoutMaster/UserLayout.cshtml";
+}
+
+<!--================Login Box Area =================-->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<img class="img-fluid" src="/Template/img/login.jpg" alt="">
+						<div class="hover" style="position:absolute">
+							<h4>Dịch vụ mới !</h4>
+							<p>Nếu bạn đã có tài khoản, vui lòng đăng nhập tại đây !!!</p>
+							<a class="primary-btn" href="@Url.Action("DangNhap", "Login")">Sign In</a>
+						</div>
+					</div>
+				</div>
+                <div class="col-lg-6">	
+                @using (Html.BeginForm())
+                {
+                    @Html.ValidationSummary(true)								
+                    <table class="table" style="border: 1px solid #808080">
+                        <tr>
+                            <td><h3 style="text-align:center">ĐĂNG KÝ TÀI KHOẢN</h3></td>
+                        </tr>
+                       <tr>
+                           <td>
+                               <div class="col-md-12 form-group">
+                                    <input type="text" class="form-control" name="HOTEN" placeholder="Họ Và Tên" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Họ Và Tên'">@ViewData["loi1"]
+							   </div>
+                           </td>
+                       </tr>
+                        <tr>
+                           <td><div class="col-md-12 form-group">
+								<input type="text" class="form-control" name="EMAIL" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">@ViewData["loi5"]@ViewData["loi6"]
+							</div></td>
+                       </tr>
+                        <tr>
+                           <td><div class="col-md-12 form-group">
+								<input type="password" class="form-control" name="PWORD" placeholder="Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật khẩu'">@ViewData["loi2"]
+							</div></td>
+                       </tr>
+                        <tr>
+                           <td> <div class="col-md-12 form-group">
+								<input type="password" class="form-control" name="REPWORD" placeholder="Nhập Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nhập Mật khẩu'">@ViewData["loi3"]
+							</div></td>
+                       </tr>
+                        <tr>
+                           <td><div class="col-md-12 form-group">
+                                <input type="text" class="form-control" name="SDT" placeholder="Số Điện Thoại" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Điện Thoại'">@ViewData["loi4"]
+							</div></td>
+                       </tr>
+                        <tr>
+                           <td><div class="col-md-12 form-group">
+                                <input type="text" class="form-control" name="DCHI" placeholder="Địa Chỉ" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Địa Chỉ'">
+							</div></td>
+                       </tr>
+                         <tr>
+                           <td>
+                               <div class="col-md-12 form-group">
+                                <input type="date" class="form-control" name="NGSINH" placeholder="Ngày Sinh" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ngày Sinh'">
+							</div>
+                           </td>
+                       </tr>
+                        <tr>
+                            <td>
+                                <div class="col-md-12 form-group" style="text-align:center">
+								<button type="submit" value="submit" class="primary-btn">Đăng Ký</button>								
+							</div>
+                            </td>
+                        </tr>
+                    </table>
+                }
+                 </div>
+			</div>
+		</div>
+	<!--================End Login Box Area =================-->

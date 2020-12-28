@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/LayoutMaster/UserLayout.cshtml";
+}
+
+<!--================Login Box Area =================-->
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+                        <div style="position: relative"><img class="img-fluid" src="/Template/img/login.jpg" alt=""></div>						
+						<div class="hover" style="position: absolute ">
+							<h4>Dịch vụ mới !</h4>
+							<p>Hãy tạo tài khoản và sử dụng những dịch vụ tốt nhất bên chúng tôi !!!</p>
+							<a class="primary-btn" href="@Url.Action("DangKy", "Login")">Tạo tài khoản mơi</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="login_form_inner">
+						<h3 class="col-md-8">Đăng nhập Tài Khoản</h3>						
+                         @using (Html.BeginForm())
+                         {
+                             @Html.ValidationSummary(true)
+
+							<div class="col-md-8 form-group">
+								<input type="text" class="form-control" name="EMAIL" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">@ViewData["loi1"]
+							</div>
+							<div class="col-md-8 form-group">
+								<input type="password" class="form-control"  name="PWORD" placeholder="Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật khẩu'">@ViewData["loi2"]
+							</div>
+                             <div class="col-md-8 form-group">
+								@ViewData["loi3"]
+							</div>                         
+							<div class="col-md-12 form-group" style="text-align:left">
+								<button type="submit" value="submit" class="primary-btn">Đăng Nhập</button>
+							</div>
+                         }
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--================End Login Box Area =================-->

@@ -42,6 +42,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -111,6 +112,11 @@
     <Compile Include="Controllers\PartialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbShopBanGiay.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbShopBanGiay.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -402,7 +408,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="img\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -460,9 +465,6 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Login\Login.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\CuaHang\DanhSachGiay.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -472,9 +474,6 @@
     <Content Include="Views\CuaHang\ChiTietSanPham.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Login\register.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\GioHang\ThanhToan.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -482,6 +481,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\CuaHang\TimKiem.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\dbShopBanGiay.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbShopBanGiay.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\dbShopBanGiay.dbml.layout">
+      <DependentUpon>dbShopBanGiay.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\DangKy.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\DangNhap.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
