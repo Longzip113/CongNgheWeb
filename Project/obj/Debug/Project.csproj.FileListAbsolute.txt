@@ -24,3 +24,110 @@ C:\Users\Long Nguyen\Desktop\DoAn - CongNgheWeb\Project\Project\bin\System.Web.W
 C:\Users\Long Nguyen\Desktop\DoAn - CongNgheWeb\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
 C:\Users\Long Nguyen\Desktop\DoAn - CongNgheWeb\Project\Project\obj\Debug\Project.dll
 C:\Users\Long Nguyen\Desktop\DoAn - CongNgheWeb\Project\Project\obj\Debug\Project.pdb
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\Project.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\Project.pdb
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\CongNgheWeb\Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\CongNgheWeb\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\CongNgheWeb\Project\obj\Debug\Project.dll
+C:\Users\Admin\Desktop\CongNgheWeb\Project\obj\Debug\Project.pdb
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\Project.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\Project.pdb
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\obj\Debug\Project.dll
+C:\Users\Admin\Desktop\CongNgheWebttt\Project\obj\Debug\Project.pdb
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\Project.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\Project.pdb
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\Newtonsoft.Json.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Net.Http.Formatting.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.Helpers.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.Http.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.Http.WebHost.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.Mvc.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.Razor.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\Newtonsoft.Json.xml
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Net.Http.Formatting.xml
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.Helpers.xml
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.Http.xml
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.Http.WebHost.xml
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.Mvc.xml
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.Razor.xml
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.xml
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\obj\Debug\Project.dll
+C:\Users\Long Nguyen\Desktop\CongNgheWebttt\Project\obj\Debug\Project.pdb
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\Project.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\Project.pdb
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\Newtonsoft.Json.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\PagedList.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\PagedList.Mvc.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Net.Http.Formatting.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.Helpers.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.Http.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.Http.WebHost.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.Mvc.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.Razor.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.WebPages.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\PagedList.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\PagedList.Mvc.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\Newtonsoft.Json.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Net.Http.Formatting.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.Helpers.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.Http.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.Http.WebHost.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.Mvc.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.Razor.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.WebPages.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\obj\Debug\Project.dll
+C:\Users\DELL\Documents\Web project 2\CongNgheWebttt\Project\obj\Debug\Project.pdb

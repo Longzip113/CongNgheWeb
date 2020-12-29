@@ -1,0 +1,27 @@
+﻿@using Project.Models;
+@model List<THUONGHIEU>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ThuongHieu</title>
+</head>
+<body>
+    <div>
+
+
+        @{
+        
+            foreach (var item in Model)
+            {
+            <li class="main-nav-list child"><a href="@Url.Action("DanhSachGiayPaging", "CuaHang", new {@style = "TheoHieu",  @item = item.IDTHUONGHIEU, @skip =0  })">@item.TENTHUONGHIEU</a></li>   
+            }
+        }
+    </div>
+</body>
+</html>
