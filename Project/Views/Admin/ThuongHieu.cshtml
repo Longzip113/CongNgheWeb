@@ -1,0 +1,13 @@
+﻿@using Project.Models;
+@model List<THUONGHIEU>
+@{
+    Layout = null;
+}
+@{
+        
+    foreach (var item in Model)
+    {
+    <a class="nav-link" href="@Url.Action("AdminHome", "Admin", new { @style = "TheoHieu", @item = item.IDTHUONGHIEU })">@item.TENTHUONGHIEU</a>  
+    }
+}
+

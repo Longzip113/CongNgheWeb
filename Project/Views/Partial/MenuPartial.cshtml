@@ -1,10 +1,12 @@
 ﻿<!-- Start Header Area -->
+
+@using Project.Models;
 	<header class="header_area sticky-header">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="@Url.Content("/Template/img/logo.png")" alt=""></a>
+					<a class="navbar-brand logo_h" href="@Url.Action("Index", "Home")"><img src="@Url.Content("/Template/img/logo.png")" alt=""></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -16,22 +18,36 @@
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item "><a class="nav-link" href="@Url.Action("Index", "Home")">Trang chủ</a></li>
 							<li class="nav-item submenu dropdown">
-								<a href="@Url.Action("DanhSachGiay", "CuaHang")" class="nav-link dropdown-toggle" >Cửa Hàng</a>
+								<a href="@Url.Action("DanhSachGiay", "CuaHang", new {style = "all", item = 0, skip= 0})" class="nav-link dropdown-toggle" >Cửa Hàng</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="@Url.Action("DanhSachGiay", "CuaHang", new { id = "Nam" })">Giày nam</a></li>
-									<li class="nav-item"><a class="nav-link" href="@Url.Action("DanhSachGiay", "CuaHang", new { id = "Nu" })">Giày nữ</a></li>
+									<li class="nav-item"><a class="nav-link" href="@Url.Action("DanhSachGiay", "CuaHang",new { @style="Nam", @item = 0, @skip=0})">Nam</a></li>
+									<li class="nav-item"><a class="nav-link" href="@Url.Action("DanhSachGiay", "CuaHang",new { @style="Nữ", @item = 0, @skip=0})">Nữ</a></li>
 								</ul>
 							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="@Url.Action("Login", "Login")" class="nav-link"> Đăng Nhập</a>
+                            <li class="nav-item submenu dropdown">
+                                @if (Session["LOGIN"] != null && (Session["LOGIN"] as UserLogin).Idrole == 2)
+                                {
+								    <a href="@Url.Action("AdminHome", "Admin",new { @style="All", @item = 0})" class="nav-link dropdown-toggle" >Quản lý</a>
+                                }
+                                else
+                                {
+                                    <a href="#" class="nav-link"> Liên hệ </a>
+                                }
 							</li>
 							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Liên hệ</a>
+                                @if (Session["LOGIN"] == null)
+                                {
+								<a href="@Url.Action("Login", "Login", new {user = "@", pass = "@"})" class="nav-link"> Đăng Nhập</a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("Logout", "Login")" class="nav-link"> Đăng Xuất</a>
+                                    <p>Xin chào: @((Session["LOGIN"] as UserLogin).HoTen)</p>
+                                }
 							</li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="@Url.Action("GioHang", "GioHang")" class="cart"><span class="ti-bag"></span></a></li>
+							<li class="nav-item">@Html.Action("GioHangPartial", "GioHang")</li>
 							<li class="nav-item">
 								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
 							</li>
@@ -43,7 +59,7 @@
 		<div class="search_input" id="search_input_box">
 			<div class="container">
 				<form class="d-flex justify-content-between" action="@Url.Action("TimKiem", "CuaHang")">
-					<input type="text" name="tenSP" class="form-control" id="search_input" placeholder="Search Here">
+					<input type="text" name="name" class="form-control" id="search_inputt" placeholder="Search Here">
 					<button type="submit" class="btn"></button>
 					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
 				</form>

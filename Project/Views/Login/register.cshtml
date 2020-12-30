@@ -20,17 +20,27 @@
 				<div class="col-lg-6">
 					<div class="login_form_inner">
 						<h3>Đăng ký</h3>
-						<form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+						<form class="row login_form" action="@Url.Action("register", "Login")" id="contactForm" novalidate="novalidate">
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Tài khoản" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tài khoản'">
+								<input type="text" class="form-control" id="name" name="user" placeholder="Tài khoản" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tài khoản'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật khẩu'">
+								<input type="password" class="form-control" id="nafme" name="pass" placeholder="Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật khẩu'">
 							</div>
                             <div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Nhập Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nhập Mật khẩu'">
+								<input type="password" class="form-control" id="natme" name="pass2" placeholder="Nhập Mật khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nhập Mật khẩu'">
 							</div>
 							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="narme" name="hoten" placeholder="Họ và tên" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Họ và tên'">
+							</div>
+                            <div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="namwe" name="diachi" placeholder="Địa chỉ" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Địa chỉ'">
+							</div>
+                            <div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="namee" name="sdt" placeholder="Số điện thoại" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Số điện thoại'">
+							</div>
+                            <div class="col-md-12 form-group">
+                               <p style="color:red"> @ViewData["lloi"] </p>
 							</div>
 							<div class="col-md-12 form-group">
 								<button type="submit" value="submit" class="primary-btn">Đăng Ký</button>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_SHOPGIAY" Class="DBShopGiayDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-QCQU5IN\SQLEXPRESS;Initial Catalog=QL_SHOPGIAY;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QL_SHOPGIAYConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CTPHIEUNHAP" Member="CTPHIEUNHAPs">
+    <Type Name="CTPHIEUNHAP">
+      <Column Name="IDCTPHIEUNHAP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPHIEUNHAP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDSP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DONGIANHAP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SLNHAP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PHIEUNHAP_CTPHIEUNHAP" Member="PHIEUNHAP" ThisKey="IDPHIEUNHAP" OtherKey="IDPHIEUNHAP" Type="PHIEUNHAP" IsForeignKey="true" />
+      <Association Name="SANPHAM_CTPHIEUNHAP" Member="SANPHAM" ThisKey="IDSP" OtherKey="IDSP" Type="SANPHAM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CTHD" Member="CTHDs">
+    <Type Name="CTHD">
+      <Column Name="IDCTHD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDHD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDSP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DONGIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HOADON_CTHD" Member="HOADON" ThisKey="IDHD" OtherKey="IDHD" Type="HOADON" IsForeignKey="true" />
+      <Association Name="SANPHAM_CTHD" Member="SANPHAM" ThisKey="IDSP" OtherKey="IDSP" Type="SANPHAM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOADON" Member="HOADONs">
+    <Type Name="HOADON">
+      <Column Name="IDHD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NGLAPHD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HOADON_CTHD" Member="CTHDs" ThisKey="IDHD" OtherKey="IDHD" Type="CTHD" />
+      <Association Name="USER_HOADON" Member="USER" ThisKey="IDUSER" OtherKey="IDUSER" Type="USER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NHACC" Member="NHACCs">
+    <Type Name="NHACC">
+      <Column Name="IDNCC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENNCC" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Association Name="NHACC_PHIEUNHAP" Member="PHIEUNHAPs" ThisKey="IDNCC" OtherKey="IDNCC" Type="PHIEUNHAP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHIEUNHAP" Member="PHIEUNHAPs">
+    <Type Name="PHIEUNHAP">
+      <Column Name="IDPHIEUNHAP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NGAYNHAP" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IDNCC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PHIEUNHAP_CTPHIEUNHAP" Member="CTPHIEUNHAPs" ThisKey="IDPHIEUNHAP" OtherKey="IDPHIEUNHAP" Type="CTPHIEUNHAP" />
+      <Association Name="NHACC_PHIEUNHAP" Member="NHACC" ThisKey="IDNCC" OtherKey="IDNCC" Type="NHACC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROLES" Member="ROLEs">
+    <Type Name="ROLE">
+      <Column Name="IDROLE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAMEROLE" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Association Name="ROLE_USER" Member="USERs" ThisKey="IDROLE" OtherKey="IDROLE" Type="USER" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SANPHAM" Member="SANPHAMs">
+    <Type Name="SANPHAM">
+      <Column Name="IDSP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDTHUONGHIEU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TENSP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SIZE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LOAI" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="GIABAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HINHANHSP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MOTA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="SANPHAM_CTPHIEUNHAP" Member="CTPHIEUNHAPs" ThisKey="IDSP" OtherKey="IDSP" Type="CTPHIEUNHAP" />
+      <Association Name="SANPHAM_CTHD" Member="CTHDs" ThisKey="IDSP" OtherKey="IDSP" Type="CTHD" />
+      <Association Name="SANPHAM_DANHGIA" Member="DANHGIAs" ThisKey="IDSP" OtherKey="IDSP" Type="DANHGIA" />
+      <Association Name="THUONGHIEU_SANPHAM" Member="THUONGHIEU" ThisKey="IDTHUONGHIEU" OtherKey="IDTHUONGHIEU" Type="THUONGHIEU" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THUONGHIEU" Member="THUONGHIEUs">
+    <Type Name="THUONGHIEU">
+      <Column Name="IDTHUONGHIEU" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENTHUONGHIEU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="THUONGHIEU_SANPHAM" Member="SANPHAMs" ThisKey="IDTHUONGHIEU" OtherKey="IDTHUONGHIEU" Type="SANPHAM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USERS" Member="USERs">
+    <Type Name="USER">
+      <Column Name="IDUSER" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDROLE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DCHI" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NGSINH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PASSWORD" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Association Name="USER_HOADON" Member="HOADONs" ThisKey="IDUSER" OtherKey="IDUSER" Type="HOADON" />
+      <Association Name="USER_DANHGIA" Member="DANHGIAs" ThisKey="IDUSER" OtherKey="IDUSER" Type="DANHGIA" />
+      <Association Name="ROLE_USER" Member="ROLE" ThisKey="IDROLE" OtherKey="IDROLE" Type="ROLE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DANHGIA" Member="DANHGIAs">
+    <Type Name="DANHGIA">
+      <Column Name="IDDG" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDSP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOSAO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NOTE" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="USER_DANHGIA" Member="USER" ThisKey="IDUSER" OtherKey="IDUSER" Type="USER" IsForeignKey="true" />
+      <Association Name="SANPHAM_DANHGIA" Member="SANPHAM" ThisKey="IDSP" OtherKey="IDSP" Type="SANPHAM" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

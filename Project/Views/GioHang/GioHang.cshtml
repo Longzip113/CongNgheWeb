@@ -4,168 +4,127 @@
 }
 
 <!--================Cart Area =================-->
-    <section class="cart_area">
-        <div class="container">
-            <div class="cart_inner">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Sản phẩm</th>
-                                <th scope="col">Giá</th>
-                                <th scope="col">Số lượng</th>
-                                <th scope="col">Đơn giá</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
+<section class="cart_area">
+    <div class="container">
+        <div class="cart_inner">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sản phẩm</th>
+                            <th scope="col">Giá</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Đơn giá</th>
+                            <th scope="col"></th>
+                            <th scope="col">@Html.ActionLink("DELETE ALL", "XoaGioHang_All","GioHang")</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if(Session["GioHang"] != null)
+                        {
+                            foreach (var item in Model)
+                            {
+<tr>
                                 <td>
                                     <div class="media">
                                         <div class="d-flex">
-                                            <img src="/Template/img/cart.jpg" alt="">
-                                        </div>
+                                            <img style="width: 100px" src="@Url.Content("~/anh/" + @item.sHinhAnh)" alt=""> @*src=".img/@item.sHinhAnh"*@
+                                </div>
                                         <div class="media-body">
-                                            <p>Minimalistic shop for multipurpose use</p>
+                                            <p>@item.sTenSP</p>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    <h5>$360.00</h5>
+                                    <h5>@String.Format("{0:0,0}", item.dGiaBan)</h5>
                                 </td>
-                                <td>
+                                @using (Html.BeginForm("CapNhatGioHang", "GioHang", new { @MaSP = item.iMaSP }))
+                                {
+<td>
                                     <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                                        <input type="text" name="qty" id="@item.iMaSP" maxlength="12" value="@item.iSoLuong" title="Quantity:"
                                             class="input-text qty">
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                        <button onclick="var result = document.getElementById('@item.iMaSP'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
                                             class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                                    </div>
+                                        <button onclick="var result = document.getElementById('@item.iMaSP'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>                                    
+                                    </div>                                 
                                 </td>
-                                <td>
-                                    <h5>$720.00</h5>
+<td>
+                                    <h5>@String.Format("{0:0,0}", item.dThanhTien) VNĐ</h5>
                                 </td>
+<td><input type="submit" value="Update" class="btn btn-primary"/></td>
+<td>@Html.ActionLink("Xóa", "XoaGioHang", new { @MaSP = item.iMaSP })</td>
+                                }
                             </tr>
-                            <tr>
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="/Template/img/cart.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <p>Minimalistic shop for multipurpose use</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$360.00</h5>
-                                </td>
-                                <td>
-                                    <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                            class="input-text qty">
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$720.00</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="/Template/img/cart.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <p>Minimalistic shop for multipurpose use</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$360.00</h5>
-                                </td>
-                                <td>
-                                    <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                            class="input-text qty">
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>$720.00</h5>
-                                </td>
-                            </tr>
-                            <tr class="bottom_button">
-                                <td>
-                                    <a class="gray_btn" href="#">Mua thêm</a>
-                                </td>
-                                <td>
+                            }
+                        }
+                        else
+                            {
+                                
+                            <div style="text-align:center">
+                                <h2>Giỏ Hàng Rỗng</h2>
+                            </div>
+                            }
+                        <tr class="bottom_button">
+                            <td>
+                                @if(Session["GioHang"] != null)
+                                {
+                                    <a class="gray_btn" href="@Url.Action("DanhSachGiay", "CuaHang", new {style = "all", item = 0, skip = 0})">Mua thêm</a>
+                                }
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Tổng số lượng
+                            </td>
+                            <td>
+                                @ViewBag.TongSoLuong
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <h5>Thành tiền</h5>
+                            </td>
+                            <td>
+                                @if(Session["GioHang"] != null)
+                                {
+                                    <h5>@String.Format("{0:0,0}", ViewBag.TongThanhTien) VND</h5>
+                                }
+                                else
+                                {
+                                    <h5>0 VND</h5>
+                                }
+                            </td>
+                        </tr>
+                        <tr class="out_button_area">
+                            <td></td>
+                            <td></td>
+                            <td></td>
 
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    <h5>Thành tiền</h5>
-                                </td>
-                                <td>
-                                    <h5>$2160.00</h5>
-                                </td>
-                            </tr>
-                            <tr class="shipping_area">
-                                <td>
-
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                </td>
-                                <td>
-                                    <div class="shipping_box">
-                                        <ul class="list">
-                                            <li><a href="#">Tiền Giao hàng: $10.00</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="out_button_area">
-                                <td>
-
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
+                            <td>
+                                @if(Session["GioHang"] != null)
+                                {
                                     <div class="checkout_btn_inner d-flex align-items-center">
-                                        <a class="primary-btn" href="@Url.Action("ThanhToan", "GioHang")">Thanh toán</a>
+                                        <a  class="primary-btn" href="@Url.Action("ThanhToan", "GioHang")">Đặt hàng</a>
                                     </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                                }
+                                else
+                                {
+                                    <div class="checkout_btn_inner d-flex align-items-center">
+                                        <a  class="primary-btn" href="@Url.Action("DanhSachGiay", "CuaHang", new {style = "all", item = 0, skip = 0})">Đi mua hàng</a>
+                                    </div>
+                                }
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </section>
-    <!--================End Cart Area =================-->
+    </div>
+</section>
+<!--================End Cart Area =================-->

@@ -42,6 +42,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -104,6 +105,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdminAPIController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CuaHangController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -112,12 +115,73 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DBShopGiay.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBShopGiay.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GioHang.cs" />
+    <Compile Include="Models\UserLogin.cs" />
+    <Compile Include="Models\UserDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebService.asmx.cs">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="anh\117598798-1669481393217019-2733634337363942966-n.jpg_v=1597819337000.jpg" />
+    <Content Include="anh\118274912-1676901085808383-4721738332879239494-n.jpg_v=1598509525000.jpg" />
+    <Content Include="anh\119549718-1698416293656862-8026301910009318647-o.jpg_v=1600668558000.jpg" />
+    <Content Include="anh\124175173-1746363665528791-1341592360941194998-o.jpg_v=1604998774000.jpg" />
+    <Content Include="anh\125185374-1749526221879202-1018442684144882496-o.jpg_v=1605695505000.jpg" />
+    <Content Include="anh\125526365-1755021684662989-7050212893143826224-o.jpg_v=1605787404000.jpg" />
+    <Content Include="anh\37858885-1035898499908648-3863492892873981952-o.jpg_v=1538565686000.jpg" />
+    <Content Include="anh\37865693-1035904289908069-8815660807309230080-o.jpg_v=1538565188000.jpg" />
+    <Content Include="anh\40603052-1073998869431944-5499477765923012608-o.jpg_v=1538562254000.jpg" />
+    <Content Include="anh\41739404-1080993552065809-6903807221310685184-o.jpg_v=1538489553000.jpg" />
+    <Content Include="anh\58751206-1224528651045631-2740601434528546816-n.jpg_v=1556432791000.jpg" />
+    <Content Include="anh\62020335-1261364830695346-6204323878206963712-n.jpg_v=1559972689000.jpg" />
+    <Content Include="anh\73458865-978164459207756-5590840336013328384-n.jpg_v=1573471781000.jpg" />
+    <Content Include="anh\77174535-975370186153558-2427803888393388032-n.jpg_v=1573296222000.jpg" />
+    <Content Include="anh\84858282-1499681206863706-4696649297700061184-o.jpg_v=1581227427000.jpg" />
+    <Content Include="anh\88169086-1516504355181391-2844007342024949760-o-cc6783af-dd44-4a25-9f13-9f8af171d02a.jpg_v=1592559570000.jpg" />
+    <Content Include="anh\AdiasNam.xml" />
+    <Content Include="anh\convers.jpg" />
+    <Content Include="anh\img-4065.jpg_v=1582104173000.jpg" />
+    <Content Include="anh\img-4222.jpg_v=1583064920000.jpg" />
+    <Content Include="anh\img-6806.jpg_v=1596941409000.jpg" />
+    <Content Include="anh\img-6818.jpg_v=1596895520000.jpg" />
+    <Content Include="anh\img-6827.jpg_v=1596895096000.jpg" />
+    <Content Include="anh\img-6837.jpg_v=1596894316000.jpg" />
+    <Content Include="anh\img-6841.jpg_v=1596893347000.jpg" />
+    <Content Include="anh\img-6849.jpg_v=1596892188000.jpg" />
+    <Content Include="anh\img-6853.jpg_v=1596891922000.jpg" />
+    <Content Include="anh\img-6859.jpg_v=1596891749000.jpg" />
+    <Content Include="anh\img-6891.jpg_v=1596891249000.jpg" />
+    <Content Include="anh\img-6896.jpg_v=1596890752000.jpg" />
+    <Content Include="anh\img-6902.jpg_v=1596890525000.jpg" />
+    <Content Include="anh\img-6906.jpg_v=1596890227000.jpg" />
+    <Content Include="anh\img-7090.jpg_v=1597670152000.jpg" />
+    <Content Include="anh\img-7094.jpg_v=1597670265000.jpg" />
+    <Content Include="anh\img-7099.jpg_v=1597671278000.jpg" />
+    <Content Include="anh\img-7120.jpg_v=1597819777000.jpg" />
+    <Content Include="anh\img-7124.jpg_v=1598185890000.jpg" />
+    <Content Include="anh\img-7542.jpg_v=1598857698000.jpg" />
+    <Content Include="anh\img-7564.jpg_v=1599296701000.jpg" />
+    <Content Include="anh\img-8167.jpg_v=1599297027000.jpg" />
+    <Content Include="anh\LogoThuongHieu\Adias.png" />
+    <Content Include="anh\LogoThuongHieu\Asics.png" />
+    <Content Include="anh\LogoThuongHieu\Converse.png" />
+    <Content Include="anh\LogoThuongHieu\Jordan.png" />
+    <Content Include="anh\LogoThuongHieu\Nike.png" />
+    <Content Include="anh\LogoThuongHieu\Puma.png" />
+    <Content Include="anh\LogoThuongHieu\Vans.png" />
+    <Content Include="anh\NamVans.xml" />
+    <Content Include="anh\NikeNam.xml" />
     <Content Include="Global.asax" />
     <Content Include="Template\css\availability-calendar.css" />
     <Content Include="Template\css\bootstrap.css" />
@@ -398,11 +462,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
+    <Content Include="WebService.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="img\" />
-    <Folder Include="Models\" />
+    <Folder Include="TemplateAdmin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -463,13 +528,7 @@
     <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\CuaHang\DanhSachGiay.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\GioHang\GioHang.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\CuaHang\ChiTietSanPham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Login\register.cshtml" />
@@ -481,7 +540,27 @@
     <Content Include="Views\Partial\MenuPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\CuaHang\TimKiem.cshtml" />
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\DBShopGiay.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DBShopGiay.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="anh\database.xlsx" />
+    <None Include="Models\DBShopGiay.dbml.layout">
+      <DependentUpon>DBShopGiay.dbml</DependentUpon>
+    </None>
+    <Content Include="Views\CuaHang\ChiTietSanPham.cshtml" />
+    <Content Include="Views\CuaHang\ThuongHieu.cshtml" />
+    <Content Include="Views\GioHang\GioHangPartial.cshtml" />
+    <Content Include="Views\Admin\AdminHome.cshtml" />
+    <Content Include="Views\Admin\ThuongHieu.cshtml" />
+    <Content Include="Views\Admin\AdminEdit.cshtml" />
+    <Content Include="Views\CuaHang\DanhSachGiay.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

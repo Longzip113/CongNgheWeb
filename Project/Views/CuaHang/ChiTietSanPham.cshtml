@@ -1,7 +1,11 @@
-﻿@{
+﻿@using Project.Models;
+@model List<DANHGIA>
+
+@{
     ViewBag.Title = "ChiTietSanPham";
     Layout = "~/Views/LayoutMaster/UserLayout.cshtml";
 }
+
 
 <!--================Single Product Area =================-->
 	<div class="product_image_area">
@@ -10,28 +14,31 @@
 				<div class="col-lg-6">
 					<div class="s_Product_carousel">
 						<div class="single-prd-item">
-							<img class="img-fluid" src="/Template/img/category/s-p1.jpg" alt="">
+							<img class="img-fluid" src="@Url.Content("~/anh/"+ViewData["HINHANHSP"])" alt="Image">
+                            
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="/Template/img/category/s-p1.jpg" alt="">
+							<img class="img-fluid" src="@Url.Content("~/anh/"+ViewData["HINHANHSP"])" alt="Image">
 						</div>
 						<div class="single-prd-item">
-							<img class="img-fluid" src="/Template/img/category/s-p1.jpg" alt="">
+							<img class="img-fluid" src="@Url.Content("~/anh/"+ViewData["HINHANHSP"])" alt="Image">
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
-						<h3>Giày nike</h3>
-						<h2>$149.99</h2>
+                        <h3></h3>
+						<h3>Giày: @ViewData["TENSP"]</h3>
+						<h2>@string.Format("{0:N0}", ViewData["GIABAN"])</h2>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Loại giày</span> : Thể thao</a></li>
+							<li><a class="active" href="#"><span>Loại giày</span>@ViewData["LOAI"]</a></li>
+                            <li><a class="active" href="#"><span>Size: </span>@ViewData["SIZE"]</a></li>
 						</ul>
 						<p>
-							Mill Oil là bộ tản nhiệt đầy dầu cải tiến với công nghệ hiện đại nhất.
-							 Nếu bạn đang tìm kiếm thứ gì đó có thể làm cho nội thất của bạn trông tuyệt vời, 
-							 đồng thời mang lại cho bạn cảm giác ấm áp dễ chịu trong mùa đông.
+							@ViewData["MOTA"]
 						</p>
+                        @using (Html.BeginForm("CapNhatGioHang", "GioHang", new { @MaSP = ViewData["IDSP"] }))
+                                {
 						<div class="product_count">
 							<label for="qty">Số lượng:</label>
 							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
@@ -41,12 +48,196 @@
 							 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
 						</div>
 						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn" href="#">Thêm giỏ hàng</a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+							<input type="submit" value="Thêm giỏ hàng" class="btn primary-btn"/>
+                            <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
 						</div>
+                        }
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!--================End Single Product Area =================-->
+
+<!--================Product Description Area =================-->
+	<section class="product_description_area">
+		<div class="container">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mô tả</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+					 aria-selected="false">Chỉ tiết sản phẩm</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
+					 aria-selected="false">Đánh giá</a>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+					@ViewData["MOTA"]
+				</div>
+				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+					<div class="table-responsive">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td>
+										<h5>Size</h5>
+									</td>
+									<td>
+										<h5>@ViewData["SIZE"]
+										</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Số lượng</h5>
+									</td>
+									<td>
+										<h5>@ViewData["SOLUONG"]</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Kiểm tra chất lượng</h5>
+									</td>
+									<td>
+										<h5>yes</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Thời gian làm mới</h5>
+									</td>
+									<td>
+										<h5>03days</h5>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="row total_rate">
+								<div class="col-6">
+									<div class="box_total">
+										<h5>Đáng giá</h5>
+										<h4>@ViewData["NhanXetTong"]</h4>
+										<h6>(@ViewData["TongNhanXet"] nhận xét)</h6>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="rating_list">
+										<h3>Bảng đánh giá</h3>
+										<ul class="list">
+											<li><a href="#">5 Sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+													 class="fa fa-star"></i><i class="fa fa-star"></i> @ViewData["s5"]</a></li>
+											<li><a href="#">4 Sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+													 class="fa fa-star"></i><i class="fa fa-star-o"></i> @ViewData["s4"]</a></li>
+											<li><a href="#">3 Sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                                <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i> @ViewData["s3"]</a></li>
+											<li><a href="#">2 Sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i> @ViewData["s2"]</a></li>
+											<li><a href="#">1 Sao <i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>@ViewData["s1"]</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="review_list">
+                                @{
+                                    foreach(var item in Model)
+                                {
+                                    <div class="review_item">
+									<div class="media">
+										<div class="d-flex">
+										</div>
+										<div class="media-body">
+											<h4>@item.USER.HOTEN</h4>
+                                            @for (int i = 0; i < @item.SOSAO; i++ )
+                                            {
+											    <i class="fa fa-star"></i>
+                                            }
+										</div>
+									</div>
+									<p>@item.NOTE</p>
+								</div>
+                                }
+                                }
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="review_box">
+								<h4>Thêm đánh giá</h4>
+								<p>Đánh giá của bạn:</p>
+								<div class="rating" role="optgroup">
+                                  <!-- in Rails just use 1.upto(5) -->  
+                                  <i class="fa fa-star-o fa-2x rating-star" id="rating-1" data-rating="1" tabindex="0" aria-label="Rate as one out of 5 stars" role="radio"></i>
+                                  <i class="fa fa-star-o fa-2x rating-star" id="rating-2" data-rating="2" tabindex="0" aria-label="Rate as two out of 5 stars" role="radio"></i>
+                                  <i class="fa fa-star-o fa-2x rating-star" id="rating-3" data-rating="3" tabindex="0" aria-label="Rate as three out of 5 stars" role="radio"></i>
+                                  <i class="fa fa-star-o fa-2x rating-star" id="rating-4" data-rating="4" tabindex="0" aria-label="Rate as four out of 5 stars" role="radio"></i>
+                                  <i class="fa fa-star-o fa-2x rating-star" id="rating-5" data-rating="5" tabindex="0" aria-label="Rate as five out of 5 stars" role="radio"></i>
+                                </div>
+								<p>Nổi bật</p>
+								<form class="row contact_form" action="@Url.Action("DanhGia", "CuaHang")" id="contactForm" novalidate="novalidate">
+									<input type="hidden" name="soSao" id="rating-input" min="1" max="5" />
+                                    <input type="hidden" name="idSP" value="@ViewData["IDSP"]"/>
+									<div class="col-md-12">
+										<div class="form-group">
+											<textarea class="form-control" name="content" id="message" rows="1" placeholder="Đánh giá ..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Review'"></textarea></textarea>
+										</div>
+									</div>
+									<div class="col-md-12 text-right">
+										<button type="submit" value="submit" class="primary-btn">Gửi đánh giá</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<script>
+    $(document).ready(function () {
+
+        function setRating(rating) {
+            $('#rating-input').val(rating);
+            // fill all the stars assigning the '.selected' class
+            $('.rating-star').removeClass('fa-star-o').addClass('selected');
+            // empty all the stars to the right of the mouse
+            $('.rating-star#rating-' + rating + ' ~ .rating-star').removeClass('selected').addClass('fa-star-o');
+        }
+
+        $('.rating-star')
+        .on('mouseover', function (e) {
+            var rating = $(e.target).data('rating');
+            // fill all the stars
+            $('.rating-star').removeClass('fa-star-o').addClass('fa-star');
+            // empty all the stars to the right of the mouse
+            $('.rating-star#rating-' + rating + ' ~ .rating-star').removeClass('fa-star').addClass('fa-star-o');
+        })
+        .on('mouseleave', function (e) {
+            // empty all the stars except those with class .selected
+            $('.rating-star').removeClass('fa-star').addClass('fa-star-o');
+        })
+        .on('click', function (e) {
+            var rating = $(e.target).data('rating');
+            setRating(rating);
+        })
+        .on('keyup', function (e) {
+            // if spacebar is pressed while selecting a star
+            if (e.keyCode === 32) {
+                // set rating (same as clicking on the star)
+                var rating = $(e.target).data('rating');
+                setRating(rating);
+            }
+        });
+    });
+</script>
+	<!--================End Product Description Area =================-->
